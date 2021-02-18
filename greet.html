@@ -89,6 +89,11 @@ function startTime() {
   // add a zero in front of numbers<10
   m = checkTime(m);
   s = checkTime(s);
+   
+  if ( h > 12){
+  h = (12- h) * -1  
+  }
+   
   document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
   t = setTimeout(function() {
     startTime()
